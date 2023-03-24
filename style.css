@@ -1,0 +1,121 @@
+ body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      background-color: #202731;
+      overflow-x: hidden;
+    }
+
+    section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20vw;
+      min-height: 400px;
+    }
+
+    .purple {
+      background-color: #61117a;
+    }
+
+    .pink {
+      background-color: #C62368;
+    }
+
+    .dark {
+      background-color: #0f0f10;
+    }
+
+    /* Curved bg with plain CSS */
+
+    .curve {
+      position: absolute;
+      width: 100%;
+      height: 255px;
+      bottom: 0;
+    }
+
+    .curve::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 55%;
+      height: 100%;
+      border-radius: 100% 50%;
+      background-color: #202731;
+      transform: translate(85%, 60%);
+    }
+
+    .curve::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 55%;
+      height: 100%;
+      border-radius: 100% 50%;
+      background-color: #61117a;
+      transform: translate(-4%, 40%);
+      z-index: -1;
+    }
+
+
+    /* Bubble bg with plain CSS */
+
+    .bubble::after {
+      content: '';
+      border-top-left-radius: 50% 100%;
+      border-top-right-radius: 50% 100%;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      background-color: #0f0f10;
+      height: 85%;
+    }
+
+    /* https://www.shapedivider.app/  */
+
+    .wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .wave svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 82px;
+      transform: rotateY(180deg);
+    }
+
+    .wave .shape-fill {
+      fill: #0f0f10;
+    }
+
+     /* SVG background image via https://haikei.app/ */
+
+     .spacer {
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+     }
+
+     .waves-haikei {
+      aspect-ratio: 900/450;
+      margin-bottom: -450px;
+      background-image: url("layered-waves-haikei.svg");
+     }
+
+     .waves-haikei-2 {
+      aspect-ratio: 900/600;
+      margin-top: -450px;
+      background-image: url("layered-waves-haikei-2.svg");
+     }
